@@ -1,4 +1,6 @@
 #labels Map,Struts2,Plugin
+#sidebar TableOfContents
+
 
 <wiki:toc max_depth="1" />
 
