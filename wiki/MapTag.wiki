@@ -12,6 +12,8 @@ TODO: text.
 == Simple Map ==
 Render a map width: 380px and height: 250px.
 
+[http://i46.tinypic.com/kmgjl.png]
+
 {{{
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -60,6 +62,8 @@ markers.add(new MarkerModel(new LatLon(22.2352, -99.6424),"","marker 5"));
 == Polylines ==
 Use a set of models in a map MarkerModel type and add the property polylines = true along with their options for managing styles
 
+[http://i47.tinypic.com/wl0cl.png]
+
 === Action ===
 {{{
 List<MarkerModel> markers = new ArrayList<MarkerModel>();        
@@ -89,6 +93,7 @@ markers.add(new MarkerModel(new LatLon(22.2352, -99.6424),"","marker 5"));
 == Polygons ==
 Use a set of models in a map MarkerModel type and add the property polygons = true along with their options for managing styles
 
+[http://i45.tinypic.com/2h37waa.png]
 
 === JSP ===
 {{{
@@ -104,6 +109,8 @@ Use a set of models in a map MarkerModel type and add the property polygons = tr
 == Geocercas ==
 
 Draw a series of circles on a map
+
+[http://i49.tinypic.com/25qeq2r.png]
 
 === Action ===
 
