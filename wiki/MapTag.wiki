@@ -58,34 +58,92 @@ markers.add(new MarkerModel(new LatLon(22.2352, -99.6424),"","marker 5"));
 }}}
 
 == Polylines ==
-Use a set of models in a map MarkerModel type and add the property polygon = true along with their options for managing styles
+Use a set of models in a map MarkerModel type and add the property polylines = true along with their options for managing styles
 
 === Action ===
+{{{
 List<MarkerModel> markers = new ArrayList<MarkerModel>();        
 markers.add(new MarkerModel(new LatLon(19.8246, -99.6571),"/img/marker1.png","marker 3","<b>Hola infowindow.</b>"));
 markers.add(new MarkerModel(new LatLon(19.0324, -89.7435),"","marker 4"));               
 markers.add(new MarkerModel(new LatLon(22.2352, -99.6424),"","marker 5"));
+}}}
 
 === JSP ===
+{{{
 <%@taglib  prefix="sl" uri="/struts-lalotech-tags" %>
 <head>
       <sl:head googleapi="true"/>
 </head>
 <body>
-     <sl:map width="380px" height="250px" mapTypeId="SATELLITE" markers="markers2" polylines="true" polylinesStrokeColor="red" polylinesStrokeOpacity="0.5" polylinesStrokeWeight="2"/>
+     <sl:map width="380px"
+             height="250px"
+             mapTypeId="SATELLITE"
+             markers="markers2"
+             polylines="true"
+             polylinesStrokeColor="red"
+             polylinesStrokeOpacity="0.5"
+             polylinesStrokeWeight="2"/>
 </body>
+}}}
 
 == Polygons ==
-=== Action ===
+Use a set of models in a map MarkerModel type and add the property polygons = true along with their options for managing styles
+
+
 === JSP ===
+{{{
+<sl:map width="380px"
+        height="250px"
+        mapTypeId="ROADMAP"
+        markers="markers"
+        polygon="true"
+        polygonFillColor="red"
+        polygonStrokeColor="#000"/>
+}}}
 
+== Geocercas ==
 
-		<h1>Tag Name: map</h1>
-		<h2>Description</h2>
-		<p>
-		Render map of Google Maps.
+Draw a series of circles on a map
 
-		</p>
+=== Action ===
+
+{{{
+List<Geocercas> geocercas = new ArrayList<Geocerca>();
+Geocerca g1 = new Geocerca(new LatLon(19.351315193191255, -99.09255981445312), 3000);
+Geocerca g2 = new Geocerca(new LatLon(19.47565549591158, -99.24087524414062), 6000);
+Geocerca g3 = new Geocerca(new LatLon(19.41608763433028, -98.94287109375), 6000);
+
+//custom styles        
+g1.setFillColor("#ff3636");
+g1.setStrokeColor("#aaa");
+g1.setFillOpacity(0.8);
+        
+g2.setFillColor("#52ff8e");
+g2.setStrokeColor("#aaa");
+        
+g3.setFillColor("#526cff");
+g3.setStrokeColor("#aaa");
+        
+geocercas.add(g1);
+geocercas.add(g2);
+geocercas.add(g3);
+}}}
+
+=== JSP ===
+{{{
+<%@taglib  prefix="sl" uri="/struts-lalotech-tags" %>
+<head>
+      <sl:head googleapi="true"/>
+</head>
+<body>
+<sl:map width="380px"
+        height="250px"
+        mapTypeId="ROADMAP"
+        geocercas="geocercas"
+        zoom="10"/>
+</body>
+}}}
+
 
 		<h2>Attributes</h2>		
 		<table width="100%">
