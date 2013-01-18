@@ -1,0 +1,44 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Fullcalendar implementation in Struts2
+
+=== Calendar Day ===
+
+[http://i45.tinypic.com/158606g.png]
+
+=== Action ===
+{{{
+
+}}}
+=== JSP ===
+{{{
+
+}}}
+
+=== Calendar Week ===
+
+[http://i47.tinypic.com/16aa140.png]
+
+=== Action ===
+{{{
+
+}}}
+=== JSP ===
+{{{
+
+}}}
+
+=== Calendar Month ===
+
+[http://i46.tinypic.com/2d797j8.png]
+
+=== Action ===
+{{{
+
+}}}
+=== JSP ===
+{{{
+
+}}}
