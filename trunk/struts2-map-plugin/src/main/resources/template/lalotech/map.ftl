@@ -37,9 +37,9 @@
         //Markers        
         <@s.iterator value="parameters.markers" status="it">            
             var marker<@s.property value="%{#it.count}" />Options = {}
-            marker<@s.property value="%{#it.count}" />Options.position = new google.maps.LatLng(${latlon.latitude},${latlon.longitude});
+            marker<@s.property value="%{#it.count}" />Options.position = new google.maps.LatLng(<@s.property value="latlon.latitude"/>,<@s.property value="latlon.longitude"/>);
             marker<@s.property value="%{#it.count}" />Options.map = ${escapedId?html};
-            marker<@s.property value="%{#it.count}" />Options.title = "${title}";
+            marker<@s.property value="%{#it.count}" />Options.title = "<@s.property value='title'/>";
             <@s.if test="icon != null && icon != ''">
             marker<@s.property value="%{#it.count}" />Options.icon = "<@s.url value="%{icon}"/>"
             </@s.if>            
@@ -47,7 +47,7 @@
             <@s.if test="infowindow != null && infowindow != ''">
             //infoWindow
             var marker<@s.property value="%{#it.count}"/>InfoWindow = new google.maps.InfoWindow({
-                content: "${infowindow}"
+                content: "<@s.property value='infowindow'/>"
             });
             //click infoWindow
             google.maps.event.addListener(marker<@s.property value="%{#it.count}"/>, 'click', function() {
@@ -139,8 +139,8 @@
             <@s.if test="zIndex!=null">
             geocerca<@s.property value="%{#it.count}" />Options.zIndex = ${zIndex}
             </@s.if>                       
-            geocerca<@s.property value="%{#it.count}" />Options.center = new google.maps.LatLng(${center.latitude},${center.longitude});
-            geocerca<@s.property value="%{#it.count}" />Options.radius = ${radius};
+            geocerca<@s.property value="%{#it.count}" />Options.center = new google.maps.LatLng(<@s.property value='center.latitude'/>,<@s.property value='center.longitude'/>);
+            geocerca<@s.property value="%{#it.count}" />Options.radius = <@s.property value='radius'/>;
             geocerca<@s.property value="%{#it.count}" />Options.map = ${escapedId?html};            
             var geocerca<@s.property value="%{#it.count}" /> = new google.maps.Circle(geocerca<@s.property value="%{#it.count}"/>Options);
             <@s.if test="(parameters.markers == null || parameters.markers.size == 0) && #it.first">
