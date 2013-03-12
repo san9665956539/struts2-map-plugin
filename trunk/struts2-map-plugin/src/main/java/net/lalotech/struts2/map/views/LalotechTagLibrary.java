@@ -15,6 +15,7 @@ import net.lalotech.struts2.map.views.velocity.components.HeadDirective;
 import net.lalotech.struts2.map.views.velocity.components.MapDirective;
 import net.lalotech.struts2.map.views.velocity.components.MarkerItemDirective;
 import net.lalotech.struts2.map.views.velocity.components.PaneDirective;
+import net.lalotech.struts2.map.views.velocity.components.PollDirective;
 import net.lalotech.struts2.map.views.velocity.components.PolylineItemDirective;
 import org.apache.struts2.views.TagLibrary;
 
@@ -37,7 +38,8 @@ public class LalotechTagLibrary implements TagLibrary {
             HeadDirective.class,
             PaneDirective.class,
             PolylineItemDirective.class,
-            MarkerItemDirective.class
+            MarkerItemDirective.class,
+            PollDirective.class
         };
         return Arrays.asList(directivas);
     }
