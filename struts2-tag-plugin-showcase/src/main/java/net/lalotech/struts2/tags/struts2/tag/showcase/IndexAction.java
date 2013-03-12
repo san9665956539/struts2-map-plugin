@@ -8,6 +8,7 @@ import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import java.util.ArrayList;
 import java.util.List;
+import net.lalotech.model.Geocerca;
 import net.lalotech.model.LatLon;
 import net.lalotech.model.MarkerModel;
 import org.apache.struts2.convention.annotation.Action;
@@ -23,7 +24,9 @@ import org.apache.struts2.convention.annotation.Result;
 @Namespace("/")
 public class IndexAction extends ActionSupport {
 
-    List<MarkerModel> markers;
+    List<MarkerModel> markers = new ArrayList<MarkerModel>();
+    List<MarkerModel> markersicons = new ArrayList<MarkerModel>();
+    List<Geocerca> geocercas = new ArrayList<Geocerca>();
 
     @Action(value = "index", results = {
         @Result(location = "/WEB-INF/pages/index.jsp", name = "success")})
@@ -38,11 +41,22 @@ public class IndexAction extends ActionSupport {
         System.out.println("call view-map-tag()");
         /**
          * Markers sample
-         */
-        markers = new ArrayList<MarkerModel>();
+         */        
         markers.add(new MarkerModel(new LatLon(19.8246, -99.6571), "", "marker 1"));
         markers.add(new MarkerModel(new LatLon(19.0324, -99.7435), "", "marker 2"));
         markers.add(new MarkerModel(new LatLon(19.2352, -99.6424), "", "marker 3"));
+        /**
+         * Markers with custom icons
+         */
+        markersicons.add(new MarkerModel(new LatLon(19.8246, -99.6571), "/img/marker1.png", "marker 1"));
+        markersicons.add(new MarkerModel(new LatLon(19.0324, -99.7435), "/img/marker2.png", "marker 2"));
+        markersicons.add(new MarkerModel(new LatLon(19.2352, -99.6424), "/img/marker3.png", "marker 3"));
+        /***
+         * Geocercas
+         */
+        geocercas.add(new Geocerca(new LatLon(19.1, -99.1), 2700));
+        geocercas.add(new Geocerca(new LatLon(19, -99), 2500));
+        geocercas.add(new Geocerca(new LatLon(19.2, -99.2), 1500));
 
         return SUCCESS;
     }
@@ -75,4 +89,21 @@ public class IndexAction extends ActionSupport {
     public void setMarkers(List<MarkerModel> markers) {
         this.markers = markers;
     }
+
+    public List<MarkerModel> getMarkersicons() {
+        return markersicons;
+    }
+
+    public void setMarkersicons(List<MarkerModel> markersicons) {
+        this.markersicons = markersicons;
+    }
+
+    public List<Geocerca> getGeocercas() {
+        return geocercas;
+    }
+
+    public void setGeocercas(List<Geocerca> geocercas) {
+        this.geocercas = geocercas;
+    }
+    
 }
