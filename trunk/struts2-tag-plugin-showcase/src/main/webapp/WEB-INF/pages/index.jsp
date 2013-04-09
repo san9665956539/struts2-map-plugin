@@ -21,6 +21,7 @@
                 <li><s:a action="calendar" namespace="/">Calendar</s:a></li>
                 <li><s:a action="fieldset" namespace="/">Fieldset</s:a></li>
                 <li><s:a action="panel" namespace="/">Panel</s:a></li>
+                <li><s:a action="poll" namespace="/">Poll</s:a></li>
             </ul>
         </div>
     </body>
