@@ -5,9 +5,9 @@
 package net.lalotech.struts2.map.components;
 
 import com.opensymphony.xwork2.util.ValueStack;
+import java.util.Random;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import static net.lalotech.struts2.map.components.Map.RANDOM;
 import org.apache.struts2.components.ClosingUIBean;
 import org.apache.struts2.views.annotations.StrutsTag;
 import org.apache.struts2.views.annotations.StrutsTagAttribute;
@@ -22,7 +22,8 @@ import org.apache.struts2.views.annotations.StrutsTagSkipInheritance;
 @StrutsTag(name="fieldset",
         tldTagClass="net.lalotech.struts2.map.views.jsp.ui.FieldsetTag",
         description="Render one header structure for style",allowDynamicAttributes=true)
-public class Fieldset extends ClosingUIBean{     
+public class Fieldset extends ClosingUIBean{  
+    public static final transient Random RANDOM = new Random();
 
     public Fieldset(ValueStack stack, HttpServletRequest request, HttpServletResponse response) {
         super(stack, request, response);

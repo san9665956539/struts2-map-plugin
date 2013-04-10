@@ -15,7 +15,7 @@ import org.apache.struts2.views.annotations.StrutsTagSkipInheritance;
 
 /**
  *
- * @author remo
+ * @author lalotech
  */
 
 @StrutsTag(name = "polylineItem",

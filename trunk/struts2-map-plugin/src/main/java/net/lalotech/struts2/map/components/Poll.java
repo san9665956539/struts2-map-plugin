@@ -5,9 +5,9 @@
 package net.lalotech.struts2.map.components;
 
 import com.opensymphony.xwork2.util.ValueStack;
+import java.util.Random;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import static net.lalotech.struts2.map.components.Map.RANDOM;
 import org.apache.struts2.components.UIBean;
 import org.apache.struts2.views.annotations.StrutsTag;
 import org.apache.struts2.views.annotations.StrutsTagAttribute;
@@ -20,6 +20,7 @@ import org.apache.struts2.views.annotations.StrutsTagAttribute;
         tldTagClass="net.lalotech.struts2.map.views.jsp.ui.PollTag",
         description="Implement poll conection with updates.",allowDynamicAttributes=false)
 public class Poll extends UIBean{
+    public static final transient Random RANDOM = new Random();
     
     protected String url;    
     protected String timeout;    
