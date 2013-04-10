@@ -17,10 +17,9 @@ import org.apache.struts2.views.jsp.ui.AbstractUITag;
  */
 public class PollTag extends AbstractUITag{
     
-    protected String url;
-    protected String loop;
-    protected String timeout;
-    protected String step;
+    protected String url;    
+    protected String timeout;    
+    protected String timestep;
 
     @Override
     public Component getBean(ValueStack vs, HttpServletRequest hsr, HttpServletResponse hsr1) {
@@ -31,27 +30,23 @@ public class PollTag extends AbstractUITag{
     protected void populateParams() {
         super.populateParams(); 
         Poll p = (Poll) component;
-        p.setUrl(url);
-        p.setLoop(loop);
-        p.setTimeout(timeout);
-        p.setStep(step);
+        p.setUrl(url);        
+        p.setTimeout(timeout);        
+        p.setTimestep(timestep);
     }
 
     public void setUrl(String url) {
         this.url = url;
     }
 
-    public void setLoop(String loop) {
-        this.loop = loop;
-    }
 
     public void setTimeout(String timeout) {
         this.timeout = timeout;
     }
+      
 
-    public void setStep(String step) {
-        this.step = step;
-    }   
-    
+    public void setTimestep(String timestep) {
+        this.timestep = timestep;
+    }    
     
 }
