@@ -4,15 +4,15 @@ Please do not edit it directly.
 -->
 <html>
     <head>
-		<title>fieldset</title>
+		<title>poll</title>
 	</head>
 
 	<body>
-		<h1>Tag Name: fieldset</h1>
+		<h1>Tag Name: poll</h1>
 		<h2>Description</h2>
 		<p>
 		<!-- START SNIPPET: tagdescription -->
-		Render one header structure for style
+		Implement poll conection with updates.
 		<!-- END SNIPPET: tagdescription -->
 		</p>
 
@@ -20,7 +20,7 @@ Please do not edit it directly.
 		<!-- START SNIPPET: tagattributes -->
 		<table width="100%">
 			<tr>
-				<td colspan="6"><h4>Dynamic Attributes Allowed:</h4> true</td>
+				<td colspan="6"><h4>Dynamic Attributes Allowed:</h4> false</td>
 			</tr>
 			<tr>
 				<td colspan="6">&nbsp;</td>
@@ -83,11 +83,11 @@ Please do not edit it directly.
 				</tr>
 				<tr>
 					<td align="left" valign="top">id</td>
-					<td align="left" valign="top">false</td>
+					<td align="left" valign="top"><strong>true</strong></td>
 					<td align="left" valign="top"></td>
 					<td align="left" valign="top">false</td>
 					<td align="left" valign="top">String</td>
-					<td align="left" valign="top">HTML id attribute</td>
+					<td align="left" valign="top"></td>
 				</tr>
 				<tr>
 					<td align="left" valign="top">javascriptTooltip</td>
@@ -128,6 +128,14 @@ Please do not edit it directly.
 					<td align="left" valign="top">false</td>
 					<td align="left" valign="top">String</td>
 					<td align="left" valign="top">Define label position of form element (top/left)</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">loop</td>
+					<td align="left" valign="top">false</td>
+					<td align="left" valign="top">true</td>
+					<td align="left" valign="top">false</td>
+					<td align="left" valign="top">Boolean</td>
+					<td align="left" valign="top">is one loop cycle?</td>
 				</tr>
 				<tr>
 					<td align="left" valign="top">name</td>
@@ -250,14 +258,6 @@ Please do not edit it directly.
 					<td align="left" valign="top">Set the html onselect attribute on rendered html element</td>
 				</tr>
 				<tr>
-					<td align="left" valign="top">openTemplate</td>
-					<td align="left" valign="top">false</td>
-					<td align="left" valign="top"></td>
-					<td align="left" valign="top">false</td>
-					<td align="left" valign="top">String</td>
-					<td align="left" valign="top">Set template to use for opening the rendered html.</td>
-				</tr>
-				<tr>
 					<td align="left" valign="top">required</td>
 					<td align="left" valign="top">false</td>
 					<td align="left" valign="top">false</td>
@@ -272,6 +272,14 @@ Please do not edit it directly.
 					<td align="left" valign="top">false</td>
 					<td align="left" valign="top">String</td>
 					<td align="left" valign="top">Define required position of required form element (left|right)</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">step</td>
+					<td align="left" valign="top">false</td>
+					<td align="left" valign="top"></td>
+					<td align="left" valign="top">false</td>
+					<td align="left" valign="top">String</td>
+					<td align="left" valign="top">number of times to execute. if loop is active step parameter don't work.</td>
 				</tr>
 				<tr>
 					<td align="left" valign="top">tabindex</td>
@@ -298,12 +306,36 @@ Please do not edit it directly.
 					<td align="left" valign="top">The template directory.</td>
 				</tr>
 				<tr>
-					<td align="left" valign="top">title</td>
-					<td align="left" valign="top"><strong>true</strong></td>
+					<td align="left" valign="top">theme</td>
+					<td align="left" valign="top">false</td>
 					<td align="left" valign="top"></td>
 					<td align="left" valign="top">false</td>
 					<td align="left" valign="top">String</td>
-					<td align="left" valign="top">text to display in the tag.</td>
+					<td align="left" valign="top">The theme (other than default) to use for rendering the element</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">timeout</td>
+					<td align="left" valign="top">false</td>
+					<td align="left" valign="top"></td>
+					<td align="left" valign="top">false</td>
+					<td align="left" valign="top">String</td>
+					<td align="left" valign="top">time in miliseconds to finish. loop</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">timestep</td>
+					<td align="left" valign="top">false</td>
+					<td align="left" valign="top"></td>
+					<td align="left" valign="top">false</td>
+					<td align="left" valign="top">String</td>
+					<td align="left" valign="top">time in miliseconds to step to step in loop</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">title</td>
+					<td align="left" valign="top">false</td>
+					<td align="left" valign="top"></td>
+					<td align="left" valign="top">false</td>
+					<td align="left" valign="top">String</td>
+					<td align="left" valign="top">Set the html title attribute on rendered html element</td>
 				</tr>
 				<tr>
 					<td align="left" valign="top">tooltip</td>
@@ -344,6 +376,14 @@ Please do not edit it directly.
 					<td align="left" valign="top">false</td>
 					<td align="left" valign="top">String</td>
 					<td align="left" valign="top">Icon path used for image that will have the tooltip</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top">url</td>
+					<td align="left" valign="top"><strong>true</strong></td>
+					<td align="left" valign="top"></td>
+					<td align="left" valign="top">false</td>
+					<td align="left" valign="top">String</td>
+					<td align="left" valign="top"></td>
 				</tr>
 				<tr>
 					<td align="left" valign="top">value</td>

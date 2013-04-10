@@ -15,9 +15,7 @@ import org.apache.struts2.views.jsp.ui.AbstractUITag;
  *
  * @author lalotech
  */
-public class FieldsetTag extends AbstractUITag{
-    protected String titulo;
-    protected String color;
+public class FieldsetTag extends AbstractUITag{       
 
     @Override
     public Component getBean(ValueStack vs, HttpServletRequest hsr, HttpServletResponse hsr1) {
@@ -27,18 +25,6 @@ public class FieldsetTag extends AbstractUITag{
     @Override
     protected void populateParams() {
         super.populateParams();
-        Fieldset f = (Fieldset)component;
-        f.setColor(color);
-        f.setTitulo(titulo);        
-        
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-   
-
-    public void setColor(String color) {
-        this.color = color;
+        Fieldset f = (Fieldset)component;        
     }
 }
