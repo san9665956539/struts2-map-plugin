@@ -1,6 +1,6 @@
 <%-- 
-    Document   : poll
-    Created on : 09-abr-2013, 17:49:42
+    Document   : portlet
+    Created on : 10-abr-2013, 11:20:18
     Author     : lalotech
 --%>
 
@@ -12,14 +12,20 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <sl:head />
+        <sl:head />    
+
     </head>
     <body>
         <s:a action="index" namespace="/">Return to menu</s:a>
-        <h1>Poll Tag</h1>
-        <sl:pane title="relog" cssStyle="width:350px">
-            <s:url action="current-time" namespace="/ajax" var="url"/>            
-            <sl:poll id="time1" url="%{url}" cssStyle="font-size:48pt;font-weight: bold"/>
-        </sl:pane>
+        <h1>Portlet Tag</h1>
+        <sl:portlet title="portlet 1" >
+            Contenido del portlet 1
+        </sl:portlet>
+        <sl:portlet title="portlet 2">
+            Contenido del portlet 2
+        </sl:portlet>
+        <sl:portlet title="portlet 3">
+            Contenido del portlet 3
+        </sl:portlet>
     </body>
 </html>

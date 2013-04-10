@@ -22,6 +22,7 @@
                 <li><s:a action="fieldset" namespace="/">Fieldset</s:a></li>
                 <li><s:a action="panel" namespace="/">Panel</s:a></li>
                 <li><s:a action="poll" namespace="/">Poll</s:a></li>
+                <li><s:a action="portlet" namespace="/">Portlet</s:a></li>
             </ul>
         </div>
     </body>

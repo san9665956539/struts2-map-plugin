@@ -87,6 +87,12 @@ public class IndexAction extends ActionSupport {
         System.out.println("call view-poll-jsp");
         return SUCCESS;
     }
+    @Action(value="portlet",results = 
+            {@Result(location = "/WEB-INF/pages/portlet.jsp")})
+    public String viewportletag(){
+        System.out.println("call view-portlet-tag()");
+        return SUCCESS;
+    }
 
     public List<MarkerModel> getMarkers() {
         return markers;

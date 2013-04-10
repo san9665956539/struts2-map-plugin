@@ -4,7 +4,7 @@
 
     <groupId>net.lalotech.struts2.tags</groupId>
     <artifactId>struts2-tag-plugin-showcase</artifactId>
-    <version>0.4</version>
+    <version>0.5</version>
     <packaging>war</packaging>
 
     <name>struts2-tag-plugin-showcase</name>
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>net.lalotech</groupId>
             <artifactId>struts2-tag-plugin</artifactId>
-            <version>0.4</version>
+            <version>0.5</version>
         </dependency>
         <dependency>
             <groupId>javax</groupId>
