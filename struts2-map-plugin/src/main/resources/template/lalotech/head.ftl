@@ -21,3 +21,7 @@
     <script type="text/javascript" src="${javaScriptBasePath}js/fullcalendar/fullcalendar.min.js"></script>
     <link rel="stylesheet" href="${javaScriptBasePath}js/fullcalendar/fullcalendar.css" type="text/css"/>
 </#if>
+
+    <!-- Portlet -->
+    <script type="text/javascript" src="${javaScriptBasePath}js/portlet/portlet-1.0.js"></script>
+    <link rel="stylesheet" href="${javaScriptBasePath}js/portlet/portlet-1.0.css" type="text/css"/>

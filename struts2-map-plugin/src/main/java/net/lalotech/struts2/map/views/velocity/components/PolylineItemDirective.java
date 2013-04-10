@@ -12,7 +12,7 @@ import org.apache.struts2.components.Component;
 
 /**
  *
- * @author remo
+ * @author lalotech
  */
 public class PolylineItemDirective extends LalotechAbstractDirective{
     public String getBeanName() {

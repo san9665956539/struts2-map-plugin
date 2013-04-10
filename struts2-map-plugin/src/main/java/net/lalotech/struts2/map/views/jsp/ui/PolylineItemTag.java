@@ -13,7 +13,7 @@ import org.apache.struts2.views.jsp.ui.AbstractUITag;
 
 /**
  *
- * @author remo
+ * @author lalotech
  */
 public class PolylineItemTag extends AbstractUITag {
     

@@ -13,7 +13,7 @@ import org.apache.struts2.views.freemarker.tags.TagModel;
 
 /**
  *
- * @author remo
+ * @author lalotech
  */
 public class PolylineItemModel extends TagModel {
 
