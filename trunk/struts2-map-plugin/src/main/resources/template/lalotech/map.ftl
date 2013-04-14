@@ -150,9 +150,30 @@
         </@s.iterator>
         
         //Events
-        <#if parameters.onclick??>
+        //'click' 'dblclick' 'mouseover' 'mouseout' 'rightclick'
+
+        <#if parameters.eventOnClick??>
              google.maps.event.addListener(${escapedId?html}, 'click', function(event) {
-                 ${parameters.onclick}(event,${escapedId?html});
+                 ${parameters.eventOnClick}(event,${escapedId?html});
             });
         </#if>
-    
+        <#if parameters.eventOnDblclick??>
+             google.maps.event.addListener(${escapedId?html}, 'dblclick', function(event) {
+                 ${parameters.eventOnDblclick}(event,${escapedId?html});
+            });
+        </#if> 
+        <#if parameters.eventOnMouseOut??>
+             google.maps.event.addListener(${escapedId?html}, 'mouseout', function(event) {
+                 ${parameters.eventOnMouseOut}(event,${escapedId?html});
+            });
+        </#if>
+        <#if parameters.eventOnMouseOver??>
+             google.maps.event.addListener(${escapedId?html}, 'mouseover', function(event) {
+                 ${parameters.eventOnMouseOver}(event,${escapedId?html});
+            });
+        </#if>  
+        <#if parameters.eventOnRightClick??>
+             google.maps.event.addListener(${escapedId?html}, 'rightclick', function(event) {
+                 ${parameters.eventOnRightClick}(event,${escapedId?html});
+            });
+        </#if>

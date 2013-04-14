@@ -32,6 +32,13 @@ public class Map extends ClosingUIBean {
     public static final transient Random RANDOM = new Random();
     protected boolean throwExceptionOnNullValueAttribute = false;
     
+    //Events on the map
+    protected String eventOnClick;
+    protected String eventOnDblclick;
+    protected String eventOnMouseOut;
+    protected String eventOnMouseOver;
+    protected String eventOnRightClick;
+    
     protected String width;
     protected String height;
     protected String polylines;
@@ -92,6 +99,23 @@ public class Map extends ClosingUIBean {
     @Override
     protected void evaluateExtraParams() {
         super.evaluateExtraParams();
+        
+        //Events
+        if(eventOnClick != null){
+            addParameter("eventOnClick", findString(eventOnClick));
+        }
+        if(eventOnDblclick != null){
+            addParameter("eventOnDblclick", findString(eventOnDblclick));
+        }
+        if(eventOnMouseOut != null){
+            addParameter("eventOnMouseOut", findString(eventOnMouseOut));
+        }
+        if(eventOnMouseOver != null){
+            addParameter("eventOnMouseOver", findString(eventOnMouseOver));
+        }
+        if(eventOnRightClick != null){
+            addParameter("eventOnRightClick", findString(eventOnRightClick));
+        }
         
         //Markers 2
         Object value3 = null;
@@ -282,6 +306,33 @@ public class Map extends ClosingUIBean {
             addParameter("id", this.id);
         }
     }
+
+    @StrutsTagAttribute(name = "eventOnRightClick",description = "")
+    public void setEventOnRightClick(String eventOnRightClick) {
+        this.eventOnRightClick = eventOnRightClick;
+    }     
+    
+    @StrutsTagAttribute(name = "eventOnClick",description = "")
+    public void setEventOnClick(String eventOnClick) {
+        this.eventOnClick = eventOnClick;
+    }
+
+    @StrutsTagAttribute(name = "eventOnDblclick",description = "")
+    public void setEventOnDblclick(String eventOnDblclick) {
+        this.eventOnDblclick = eventOnDblclick;
+    }
+
+    @StrutsTagAttribute(name = "eventOnMouseOut",description = "")
+    public void setEventOnMouseOut(String eventOnMouseOut) {
+        this.eventOnMouseOut = eventOnMouseOut;
+    }
+
+    @StrutsTagAttribute(name = "eventOnMouseOver",description = "")
+    public void setEventOnMouseOver(String eventOnMouseOver) {
+        this.eventOnMouseOver = eventOnMouseOver;
+    }   
+    
+    
     @StrutsTagAttribute(name="polygon",description="consist of a series of coordinates in an ordered sequence.",defaultValue="false",type="Boolean")
     public void setPolygon(String polygon) {
         this.polygon = polygon;
