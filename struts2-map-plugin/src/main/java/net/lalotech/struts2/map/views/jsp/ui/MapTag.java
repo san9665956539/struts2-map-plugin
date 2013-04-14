@@ -16,6 +16,13 @@ import org.apache.struts2.views.jsp.ui.AbstractUITag;
  * @author Windows7x64
  */
 public class MapTag extends AbstractUITag{  
+    //Events on the map
+    protected String eventOnClick;
+    protected String eventOnDblclick;
+    protected String eventOnMouseOut;
+    protected String eventOnMouseOver;
+    protected String eventOnRightClick;
+    
     //mas propiedades aqui
     protected String width;
     protected String height;
@@ -80,6 +87,13 @@ public class MapTag extends AbstractUITag{
         //si hay mas propiedades inflarlas aqui
         Map m = (Map)component;
         
+        //events
+        m.setEventOnClick(eventOnClick);
+        m.setEventOnDblclick(eventOnDblclick);
+        m.setEventOnMouseOut(eventOnMouseOut);
+        m.setEventOnMouseOver(eventOnMouseOver);
+        m.setEventOnRightClick(eventOnRightClick);
+        
         //data
         m.setMarkers2(markers2);
         m.setMarkers(markers);
@@ -129,8 +143,29 @@ public class MapTag extends AbstractUITag{
         m.setZoomControl(zoomControl);
         m.setZoomControlOptions(zoomControlOptions);       
     }
-    //set's and get's de mas propiedades     
 
+    //set's and get's de mas propiedades
+    
+    public void setEventOnRightClick(String eventOnRightClick) {
+        this.eventOnRightClick = eventOnRightClick;
+    }
+    
+    public void setEventOnClick(String eventOnClick) {
+        this.eventOnClick = eventOnClick;
+    }
+
+    public void setEventOnDblclick(String eventOnDblclick) {
+        this.eventOnDblclick = eventOnDblclick;
+    }
+
+    public void setEventOnMouseOut(String eventOnMouseOut) {
+        this.eventOnMouseOut = eventOnMouseOut;
+    }
+
+    public void setEventOnMouseOver(String eventOnMouseOver) {
+        this.eventOnMouseOver = eventOnMouseOver;
+    }
+    
     public void setMarkers2(Object markers2) {
         this.markers2 = markers2;
     }    
