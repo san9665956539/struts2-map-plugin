@@ -8,6 +8,7 @@ import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
 import java.util.ArrayList;
 import java.util.List;
+import net.lalotech.model.EventModel;
 import net.lalotech.model.Geocerca;
 import net.lalotech.model.LatLon;
 import net.lalotech.model.MarkerModel;
@@ -27,6 +28,12 @@ public class IndexAction extends ActionSupport {
     List<MarkerModel> markers = new ArrayList<MarkerModel>();
     List<MarkerModel> markersicons = new ArrayList<MarkerModel>();
     List<Geocerca> geocercas = new ArrayList<Geocerca>();
+    
+    List<EventModel> agendaDay = new ArrayList<EventModel>();
+    List<EventModel> agendaWeek = new ArrayList<EventModel>();
+    List<EventModel> month = new ArrayList<EventModel>();
+    List<EventModel> monthEvents = new ArrayList<EventModel>();
+    
 
     @Action(value = "index", results = {
         @Result(location = "/WEB-INF/pages/index.jsp", name = "success")})
@@ -65,6 +72,30 @@ public class IndexAction extends ActionSupport {
         @Result(location = "/WEB-INF/pages/calendar.jsp")})
     public String viewcalendartag() {
         System.out.println("call view-calendar-tag()");
+        String date = "2013-04-04";
+        
+        //Agenda Day
+        agendaDay.add(new EventModel(1,"Event 1",date+" 06:10", date+" 06:35"));
+        agendaDay.add(new EventModel(1,"Event 2",date+" 07:00", date+" 07:25"));
+        agendaDay.add(new EventModel(1,"Event 3",date+" 07:30", date+" 08:00"));
+        agendaDay.add(new EventModel(1,"Event 4",date+" 08:00", date+" 08:50"));
+        agendaDay.add(new EventModel(1,"Event 5",date+" 09:00", date+" 09:20"));
+        agendaDay.add(new EventModel(1,"Event 6",date+" 10:00", date+" 11:45"));
+        agendaDay.add(new EventModel(1,"Event 7",date+" 12:15", date+" 14:00"));
+        agendaDay.add(new EventModel(1,"Event 8",date+" 15:00", date+" 18:00"));
+        
+        //WeekDay
+        agendaWeek.add(new EventModel(1,"","2013-04-01 10:00", "2013-04-01 11:00"));
+        agendaWeek.add(new EventModel(1,"","2013-04-01 12:00", "2013-04-01 13:00"));
+        agendaWeek.add(new EventModel(1,"","2013-04-02 08:00", "2013-04-01 11:00"));
+        agendaWeek.add(new EventModel(1,"","2013-04-03 10:00", "2013-04-01 14:00"));
+        agendaWeek.add(new EventModel(1,"","2013-04-04 13:00", "2013-04-01 13:30"));
+        agendaWeek.add(new EventModel(1,"","2013-04-05 15:00", "2013-04-01 17:00"));
+        
+        //Month
+        
+        //Month events
+        
         return SUCCESS;
     }
 
@@ -93,29 +124,64 @@ public class IndexAction extends ActionSupport {
         System.out.println("call view-portlet-tag()");
         return SUCCESS;
     }
-
+    //<editor-fold defaultstate="collapsed" desc="comment">
+    
+    
     public List<MarkerModel> getMarkers() {
         return markers;
     }
-
+    
     public void setMarkers(List<MarkerModel> markers) {
         this.markers = markers;
     }
-
+    
     public List<MarkerModel> getMarkersicons() {
         return markersicons;
     }
-
+    
     public void setMarkersicons(List<MarkerModel> markersicons) {
         this.markersicons = markersicons;
     }
-
+    
     public List<Geocerca> getGeocercas() {
         return geocercas;
     }
-
+    
     public void setGeocercas(List<Geocerca> geocercas) {
         this.geocercas = geocercas;
     }
     
+    public List<EventModel> getAgendaDay() {
+        return agendaDay;
+    }
+    
+    public void setAgendaDay(List<EventModel> agendaDay) {
+        this.agendaDay = agendaDay;
+    }
+    
+    public List<EventModel> getAgendaWeek() {
+        return agendaWeek;
+    }
+    
+    public void setAgendaWeek(List<EventModel> agendaWeek) {
+        this.agendaWeek = agendaWeek;
+    }
+    
+    public List<EventModel> getMonth() {
+        return month;
+    }
+    
+    public void setMonth(List<EventModel> month) {
+        this.month = month;
+    }
+    
+    public List<EventModel> getMonthEvents() {
+        return monthEvents;
+    }
+    
+    public void setMonthEvents(List<EventModel> monthEvents) {
+        this.monthEvents = monthEvents;
+    }
+    
+    //</editor-fold>
 }
