@@ -20,12 +20,18 @@ public class CalendarTag extends AbstractUITag {
     //data
     public Object events;
     //events
-    protected String dayClick;
+     protected String dayClick;
     protected String eventClick;
     protected String eventMouseover;
     protected String eventMouseout;
     protected String eventDrop;
+    protected String eventDragStart;
+    protected String eventDragStop;
     protected String eventResize;
+    protected String eventResizeStart;
+    protected String eventResizeStop;
+    protected String eventRender;
+    protected String eventAfterRender;
     //options agendaWeek  and agendaDay
     protected String allDaySlot;
     protected String allDayText;
@@ -83,6 +89,13 @@ public class CalendarTag extends AbstractUITag {
         c.setEventMouseout(eventMouseout);
         c.setEventDrop(eventDrop);
         c.setEventResize(eventResize);
+        c.setEventDragStart(eventDragStart);
+        c.setEventDragStop(eventDragStop);
+        c.setEventResizeStart(eventResizeStart);
+        c.setEventResizeStop(eventResizeStop);
+        c.setEventRender(eventRender);
+        c.setEventAfterRender(eventAfterRender);
+        
 
         //option agendaWeek and agendaDay
         c.setAllDaySlot(allDaySlot);
@@ -125,6 +138,30 @@ public class CalendarTag extends AbstractUITag {
 
     }
 
+    public void setEventDragStart(String eventDragStart) {
+        this.eventDragStart = eventDragStart;
+    }
+
+    public void setEventDragStop(String eventDragStop) {
+        this.eventDragStop = eventDragStop;
+    }
+
+    public void setEventResizeStart(String eventResizeStart) {
+        this.eventResizeStart = eventResizeStart;
+    }
+
+    public void setEventResizeStop(String eventResizeStop) {
+        this.eventResizeStop = eventResizeStop;
+    }
+
+    public void setEventRender(String eventRender) {
+        this.eventRender = eventRender;
+    }
+
+    public void setEventAfterRender(String eventAfterRender) {
+        this.eventAfterRender = eventAfterRender;
+    }
+    
     public void setGotoDate(String gotoDate) {
         this.gotoDate = gotoDate;
     }   
