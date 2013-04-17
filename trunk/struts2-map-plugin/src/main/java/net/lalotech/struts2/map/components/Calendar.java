@@ -35,7 +35,13 @@ public class Calendar extends ClosingUIBean {
     protected String eventMouseover;
     protected String eventMouseout;
     protected String eventDrop;
+    protected String eventDragStart;
+    protected String eventDragStop;
     protected String eventResize;
+    protected String eventResizeStart;
+    protected String eventResizeStop;
+    protected String eventRender;
+    protected String eventAfterRender;
     //options agendaWeek  and agendaDay
     protected String allDaySlot;
     protected String allDayText;
@@ -81,6 +87,7 @@ public class Calendar extends ClosingUIBean {
     protected void evaluateExtraParams() {
         super.evaluateExtraParams();
         
+                
         if(gotoDate != null){
             addParameter("gotoDate", findString(gotoDate));
         }
@@ -112,6 +119,29 @@ public class Calendar extends ClosingUIBean {
         }
 
         //events
+        if(eventAfterRender != null){
+            addParameter("eventAfterRender", findString(eventAfterRender));
+        }
+        
+        if(eventRender != null){
+            addParameter("eventRender", findString(eventRender));
+        }
+        
+        if(eventResizeStop != null){
+            addParameter("eventResizeStop", findString(eventResizeStop));
+        }
+        
+        if(eventResizeStart != null){
+            addParameter("eventResizeStart", findString(eventResizeStart));
+        }
+        
+        if(eventDragStop != null){
+            addParameter("eventDragStop", findString(eventDragStop));
+        }
+        
+        if(eventDragStart != null){
+            addParameter("eventDragStart", findString(eventDragStart));
+        }
         if (dayClick != null) {
             addParameter("dayClick", findString(dayClick));
         }
@@ -130,6 +160,9 @@ public class Calendar extends ClosingUIBean {
         if (eventResize != null) {
             addParameter("eventResize", findString(eventResize));
         }
+        
+        
+        
         if(editable != null){
             addParameter("editable", findValue(editable,Boolean.class));
         }
@@ -266,6 +299,36 @@ public class Calendar extends ClosingUIBean {
         super.setTheme(theme);
     }
 
+    @StrutsTagAttribute(name = "eventDragStart",description = "")
+    public void setEventDragStart(String eventDragStart) {
+        this.eventDragStart = eventDragStart;
+    }
+
+    @StrutsTagAttribute(name = "eventDragStop",description = "")
+    public void setEventDragStop(String eventDragStop) {
+        this.eventDragStop = eventDragStop;
+    }
+
+    @StrutsTagAttribute(name = "eventResizeStart",description = "")
+    public void setEventResizeStart(String eventResizeStart) {
+        this.eventResizeStart = eventResizeStart;
+    }
+
+    @StrutsTagAttribute(name = "eventResizeStop",description = "")
+    public void setEventResizeStop(String eventResizeStop) {
+        this.eventResizeStop = eventResizeStop;
+    }
+
+    @StrutsTagAttribute(name = "eventRender",description = "")
+    public void setEventRender(String eventRender) {
+        this.eventRender = eventRender;
+    }
+    
+    @StrutsTagAttribute(name = "eventAfterRender",description = "")
+    public void setEventAfterRender(String eventAfterRender) {
+        this.eventAfterRender = eventAfterRender;
+    }    
+    
     @StrutsTagAttribute(name="gotoDate",description="Moves the calendar to an arbitrary year/month/date.")
     public void setGotoDate(String gotoDate) {
         this.gotoDate = gotoDate;
