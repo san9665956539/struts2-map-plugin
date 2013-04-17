@@ -1,13 +1,15 @@
 #summary One-sentence summary of this page.
 
-= Introduction =
+= FieldSet Tag=
 
-Add your content here.
+[http://i46.tinypic.com/s4rhbn.png]
 
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+== JSP ==
+{{{
+...
+<%@taglib prefix="sl" uri="/struts-lalotech-tags" %>
+...
+<sl:fieldset title="panel 1" cssStyle="float:left;width:150px">
+         content here!
+</sl:fieldset>
+}}}
