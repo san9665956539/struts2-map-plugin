@@ -19,13 +19,13 @@
         <s:a action="index" namespace="/">Return to menu</s:a>
         <h1>Portlet Tag</h1>
         <sl:portlet title="portlet 1" >
-            Contenido del portlet 1
+            Content 1
         </sl:portlet>
         <sl:portlet title="portlet 2">
-            Contenido del portlet 2
+            Content 2
         </sl:portlet>
         <sl:portlet title="portlet 3">
-            Contenido del portlet 3
+            Content 3
         </sl:portlet>
     </body>
 </html>
