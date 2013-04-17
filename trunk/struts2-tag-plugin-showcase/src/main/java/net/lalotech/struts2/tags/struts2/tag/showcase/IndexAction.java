@@ -86,14 +86,20 @@ public class IndexAction extends ActionSupport {
         
         //WeekDay
         agendaWeek.add(new EventModel(1,"","2013-04-01 10:00", "2013-04-01 11:00"));
-        agendaWeek.add(new EventModel(1,"","2013-04-01 12:00", "2013-04-01 13:00"));
-        agendaWeek.add(new EventModel(1,"","2013-04-02 08:00", "2013-04-01 11:00"));
-        agendaWeek.add(new EventModel(1,"","2013-04-03 10:00", "2013-04-01 14:00"));
-        agendaWeek.add(new EventModel(1,"","2013-04-04 13:00", "2013-04-01 13:30"));
-        agendaWeek.add(new EventModel(1,"","2013-04-05 15:00", "2013-04-01 17:00"));
+        agendaWeek.add(new EventModel(2,"","2013-04-01 12:00", "2013-04-01 13:00"));
+        agendaWeek.add(new EventModel(3,"","2013-04-02 08:00", "2013-04-02 11:00"));
+        agendaWeek.add(new EventModel(4,"","2013-04-03 10:00", "2013-04-03 14:00"));
+        agendaWeek.add(new EventModel(5,"","2013-04-04 13:00", "2013-04-04 13:30"));
+        agendaWeek.add(new EventModel(6,"","2013-04-05 15:00", "2013-04-05 17:00"));
         
         //Month
+        month.add(new EventModel(7, "", "2013-04-01", "2013-04-03"));
+        month.add(new EventModel(8, "", "2013-04-02", "2013-04-05"));
+        month.add(new EventModel(9, "", "2013-04-03", "2013-04-05"));
+        month.add(new EventModel(10, "", "2013-04-04", "2013-04-08"));
+        month.add(new EventModel(11, "", "2013-04-10", "2013-04-15"));
         
+        month.addAll(agendaWeek);
         //Month events
         
         return SUCCESS;
