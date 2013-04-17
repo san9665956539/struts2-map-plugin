@@ -16,16 +16,18 @@
 
     </head>
     <body>
-        <s:a action="index" namespace="/">Return to menu</s:a>
-        <h1>Portlet Tag</h1>
-        <sl:portlet title="portlet 1" >
-            Content 1
-        </sl:portlet>
-        <sl:portlet title="portlet 2">
-            Content 2
-        </sl:portlet>
-        <sl:portlet title="portlet 3">
-            Content 3
-        </sl:portlet>
+        <div style="width: 400px">
+            <s:a action="index" namespace="/">Return to menu</s:a>
+                <h1>Portlet Tag</h1>
+            <sl:portlet title="portlet 1" >
+                Content 1
+            </sl:portlet>
+            <sl:portlet title="portlet 2">
+                Content 2
+            </sl:portlet>
+            <sl:portlet title="portlet 3">
+                Content 3
+            </sl:portlet>
+        </div>
     </body>
 </html>
